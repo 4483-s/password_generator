@@ -8,4 +8,10 @@ body {
 }
 .container {
   display: grid;
+  grid-template-columns: repeat(20, 5vw);
+  grid-template-rows: repeat(20, 5vh);
+}
+.check {
+  grid-area: 1 / 1/ -1/ 11;
+  background-color: yellow;
 }
