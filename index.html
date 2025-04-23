@@ -10,7 +10,7 @@
     <div class="container">
       <div class="title"><h1>Password Generator</h1></div>
       <div class="checkcontainer">
-        <input type="checkbox" id="lowercase" class="check" /><label
+        <input type="checkbox" checked id="lowercase" class="check" /><label
           for="lowercase"
         >
           Lowercase</label
@@ -28,6 +28,10 @@
         >
           Special Charactors</label
         ><br />
+        <label for="count">Length</label>
+
+        <input type="number" id="length" value="9" /> <br />
+
         <button class="btn">Generate</button>
       </div>
       <div class="result"></div>

@@ -4,6 +4,7 @@ const uppercaseCh = document.querySelector("#uppercase");
 const numberCh = document.querySelector("#number");
 const specialCh = document.querySelector("#special");
 const result = document.querySelector(".result");
+const length = document.querySelector("#length");
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const uppercase = lowercase.toUpperCase();
 const number = "1234567890";
@@ -11,9 +12,9 @@ const specialChar = `!@#$%^&*()_+=-"';:/.,<>?\\|~`;
 btn.addEventListener("click", function () {
   generate();
 });
-
 function generate() {
-  const list = "";
+  let list = "";
+  let generatedResult = "";
   if (lowercaseCh.checked) {
     list += lowercase;
   }
@@ -26,5 +27,8 @@ function generate() {
   if (specialCh.checked) {
     list += specialChar;
   }
-  result.textContent = 8;
+  for (let i = 0; i < length.value; i++) {
+    generatedResult += list[Math.floor(Math.random() * list.length)];
+  }
+  result.textContent = generatedResult;
 }
