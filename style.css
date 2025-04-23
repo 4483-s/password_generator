@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   background-color: black;
@@ -18,8 +19,28 @@ body {
 }
 .checkcontainer {
   grid-area: 3 / 1/ -1/ 7;
+  padding-left: 1.7em;
   background-color: yellow;
   color: black;
   border-radius: 1rem;
   padding-top: 1rem;
+}
+.btn {
+  margin-top: 3em;
+  background-color: blueviolet;
+  border: none;
+  width: 9em;
+  height: 4em;
+  color: white;
+  border-radius: 2em;
+}
+.result {
+  grid-row-start: 3;
+  grid-row-end: 8;
+  grid-column-start: 8;
+  grid-column-end: -2;
+  background-color: orange;
+  border-radius: 1rem;
+
+  padding: 4px;
 }
